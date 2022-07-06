@@ -1,0 +1,13 @@
+import java.util.Scanner; // importa a classe Scanner
+public class MainClass {
+  public static void main(String[] args) {
+    final String EOL = System.getProperty("line.separator"); 
+    Scanner scanner = new Scanner("alô, mundo " + EOL + "estou aqui"); // instancia um scanner para ler a string com 2 linhas
+    scanner.useDelimiter(","); // altera o delimitador para ","
+    while (scanner.hasNext()) { // verifica se existe próximo
+      String s = scanner.next(); // lê o próximo e armazena em "s"
+      System.out.println(s); // imprime o valor de "s"
+    }
+    scanner.close(); // fecha o scanner
+  }
+}
